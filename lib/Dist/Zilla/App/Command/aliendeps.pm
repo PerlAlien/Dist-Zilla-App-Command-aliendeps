@@ -8,13 +8,57 @@ use Ref::Util qw( is_hashref );
 # ABSTRACT: Print your alien distributions alien prerequisites
 # VERSION
 
+=head1 SYNOPSIS
+
+ % dzil aliendeps | cpanm
+
+=head1 DESCRIPTION
+
+L<Alien::Base> based L<Alien> distributions may have optional dependencies
+that are required when it is determined that a build from source code is
+necessary.  This command probes your distribution for such optional requirements
+and lists them.
+
+This command of course works with L<Dist::Zilla::Plugin::Alien> (and
+L<Dist::Zilla::PluginBundle::Alien>), but will also work with any
+L<Dist::Zilla::Plugin::ModuleBuild> based distribution that emits an
+C<alien_bin_requires> property.
+
+
+=head1 OPTIONS
+
+=over 4
+
+=item --env
+
+Honor the C<ALIEN_FORCE> and C<ALIEN_INSTALL_TYPE> environment variables used by
+L<Alien::Base::ModuleBuild> (see L<Alien::Base::ModuleBuild::API>).  That is
+do not list anything unless a source code build will be forced.  This may be useful
+when invoked from a .travis.yml file.
+
+=back
+
+=cut
+
 sub abstract { "print your alien distributions alien prerequisites" }
 
-sub opt_spec { () }
+sub opt_spec { [ 'env', 'honor ALIEN_FORCE and ALIEN_INSTALL_TYPE environment variables' ] }
 
 sub execute
 {
   my ($self, $opt, $arg) = @_;
+
+  if($opt->env)
+  {
+    if(defined $ENV{ALIEN_INSTALL_TYPE})
+    {
+      return if $ENV{ALIEN_INSTALL_TYPE} eq 'system';
+    }
+    elsif(defined $ENV{ALIEN_FORCE})
+    {
+      return if !$ENV{ALIEN_FORCE};
+    }
+  }
   
   # Dist::Zilla::Plugin::ModuleBuild
   # module_build_args
