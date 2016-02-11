@@ -24,7 +24,8 @@ This command of course works with [Dist::Zilla::Plugin::Alien](https://metacpan.
 
     Honor the `ALIEN_FORCE` and `ALIEN_INSTALL_TYPE` environment variables used by
     [Alien::Base::ModuleBuild](https://metacpan.org/pod/Alien::Base::ModuleBuild) (see [Alien::Base::ModuleBuild::API](https://metacpan.org/pod/Alien::Base::ModuleBuild::API)).  That is
-    do not list anything unless a source code build will be forced.
+    do not list anything unless a source code build will be forced.  This may be useful
+    when invoked from a .travis.yml file.
 
 # AUTHOR
 
