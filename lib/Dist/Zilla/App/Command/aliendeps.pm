@@ -5,10 +5,10 @@ use warnings;
 use Dist::Zilla::App -command;
 use Ref::Util qw( is_hashref );
 
-# ABSTRACT: Print your alien distributions alien prerequsites
+# ABSTRACT: Print your alien distributions alien prerequisites
 # VERSION
 
-sub abstract { "print your alien distributions alien prerequsites" }
+sub abstract { "print your alien distributions alien prerequisites" }
 
 sub opt_spec { () }
 
