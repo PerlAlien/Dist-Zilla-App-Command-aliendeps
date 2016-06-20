@@ -29,7 +29,7 @@ This command of course works with [Dist::Zilla::Plugin::Alien](https://metacpan.
 
 # AUTHOR
 
-Graham Ollis &lt;plicease@cpan.org>
+Graham Ollis <plicease@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
