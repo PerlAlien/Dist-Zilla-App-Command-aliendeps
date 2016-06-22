@@ -1,4 +1,4 @@
-# Dist::Zilla::App::Command::aliendeps [![Build Status](https://secure.travis-ci.org/plicease/Dist-Zilla-App-Command-aliendeps.png)](http://travis-ci.org/plicease/Dist-Zilla-App-Command-aliendeps)
+# Dist::Zilla::App::Command::aliendeps [![Build Status](https://secure.travis-ci.org/Perl5-Alien/Dist-Zilla-App-Command-aliendeps.png)](http://travis-ci.org/Perl5-Alien/Dist-Zilla-App-Command-aliendeps)
 
 Print your alien distributions alien prerequisites
 
