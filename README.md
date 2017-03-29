@@ -1,12 +1,16 @@
 # Dist::Zilla::App::Command::aliendeps [![Build Status](https://secure.travis-ci.org/Perl5-Alien/Dist-Zilla-App-Command-aliendeps.png)](http://travis-ci.org/Perl5-Alien/Dist-Zilla-App-Command-aliendeps)
 
-Print your alien distributions alien prerequisites
+(DEPRECATED) Print your alien distributions alien prerequisites
 
 # SYNOPSIS
 
     % dzil aliendeps | cpanm
 
 # DESCRIPTION
+
+**NOTE**: This [Dist::Zilla](https://metacpan.org/pod/Dist::Zilla) subcommand is deprecated in favor of [App::af](https://metacpan.org/pod/App::af)
+which can produce useful results with [alienfile](https://metacpan.org/pod/alienfile) + [Alien::Build](https://metacpan.org/pod/Alien::Build) with the
+`af missing` command.
 
 [Alien::Base](https://metacpan.org/pod/Alien::Base) based [Alien](https://metacpan.org/pod/Alien) distributions may have optional dependencies
 that are required when it is determined that a build from source code is

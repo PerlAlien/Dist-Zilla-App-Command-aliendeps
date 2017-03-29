@@ -8,6 +8,7 @@ pod_spelling_system:
   stopwords:
     - env
     - travis
+    - subcommand
 
 pod_coverage:
   skip: 0

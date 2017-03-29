@@ -5,7 +5,7 @@ use warnings;
 use Dist::Zilla::App -command;
 use Ref::Util qw( is_hashref );
 
-# ABSTRACT: Print your alien distributions alien prerequisites
+# ABSTRACT: (DEPRECATED) Print your alien distributions alien prerequisites
 # VERSION
 
 =head1 SYNOPSIS
@@ -13,6 +13,10 @@ use Ref::Util qw( is_hashref );
  % dzil aliendeps | cpanm
 
 =head1 DESCRIPTION
+
+B<NOTE>: This L<Dist::Zilla> subcommand is deprecated in favor of L<App::af>
+which can produce useful results with L<alienfile> + L<Alien::Build> with the
+C<af missing> command.
 
 L<Alien::Base> based L<Alien> distributions may have optional dependencies
 that are required when it is determined that a build from source code is
