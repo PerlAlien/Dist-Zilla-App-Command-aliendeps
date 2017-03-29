@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.03      2017-03-29 09:08:02 -0400
+  - Deprecated.  Suggest: migrate to alienfile + Alien::Build + App::af
+
 0.02      2016-06-20 14:02:32 -0400
   - Fix minor documentation nit
 
